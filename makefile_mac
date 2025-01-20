@@ -1,0 +1,60 @@
+# . /opt/intel/oneapi/setvars.sh
+#———————————
+# Select Compiler
+#———————————
+
+COMPILER =  ifort
+
+#———————————
+# Select Compilation Switches
+#———————————
+
+#-ipo -prec-div -xHost  -O3 -ipo -prec-div -no-wrap-margin
+
+SWITCH = -qopenmp -fp-model fast=2 -fp-speculation fast -O3 -heap-arrays 0 -no-wrap-margin -nowarn
+
+#SWITCH =  -fpp -g -qopenmp -heap-arrays 0 -CB -traceback -check all  -no-wrap-margin
+
+#———————————
+# Source Code
+#———————————
+
+SRCS =src/mod_utilities.f90 src/mod_numerical.f90 src/mod_globals.f90 src/mod_functions.f90 src/mod_initialize.f90 src/mod_distribution.f90 src/mod_household.f90 src/mod_targets.f90  src/mod_steady_state.f90 src/mod_transition.f90 src/mod_welfare.f90 src/main.f90
+
+
+#———————————
+# Executable
+#———————————
+EXEC = exe/run_mac
+
+#———————————
+# Compilation Command
+#———————————
+ifort:
+	$(COMPILER) -fpp -llapack -lblas $(SWITCH) $(SRCS) -o $(EXEC)
+	
+# Cleaning everything
+
+#———————————
+# Cleaning
+#———————————
+
+clean:
+	rm -f $(EXEC)
+	rm -f *.mod
+	rm -f *.obj
+
+#To compile in Mac, type:
+# $ make -f makefile_mac
+
+#To compile in Windows, type:
+# $ nmake /f makefile_win
+
+#Compilation with pre-processor directives, see term -fpp 
+#$(COMPILER) -fpp $(SWITCH) $(SRCS) -o $(EXEC)
+
+#Flag /heap-arrays0 tells the compiler to store
+#all arrays on the heap instead of the stack
+#see https://community.intel.com/t5/Intel-Fortran-Compiler/allocatable-automatic-stack-heap/m-p/1229112#M152715
+
+# Old line $(COMPILER) -fpp $(SWITCH) $(SRCS) -o $(EXEC)

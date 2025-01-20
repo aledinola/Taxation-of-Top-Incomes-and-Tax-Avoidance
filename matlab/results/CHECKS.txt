@@ -1,0 +1,5 @@
+Initial condition for r =   2.058143200000000E-002
+
+Equil. value for r =   2.058081267498275E-002
+
+Initial condition for  2.058081267498275E-002

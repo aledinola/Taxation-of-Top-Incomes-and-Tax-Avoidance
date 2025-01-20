@@ -1,0 +1,7 @@
+# Compiled source #
+###################
+*.mod
+*.exe
+*.obj
+output/
+

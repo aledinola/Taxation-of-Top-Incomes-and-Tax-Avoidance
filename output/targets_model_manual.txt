@@ -1,0 +1,352 @@
+ 
+FLAGS
+do_GE        :            2
+cf_avoidance  :            0
+cf_occpol  :            0
+howard       :            1
+a_space :     3.500000
+G_frac :     0.170000
+G_bench :     0.098853
+super_shock        :  T
+eps_super :    12.200000
+prob_super :     0.008500
+prob_super_back :     0.120000
+ 
+GRIDS
+na     :  500
+neps   :   11
+ntheta :   15
+a_max :  1000.000000
+l_max :     1.600000
+le :     0.000000
+nx_max_nonconvex :  150
+tolV :  0.000010000
+ 
+EXTERNAL PARAMETERS
+sigma1      :     1.500000
+sigma2     :     1.700000
+alpha      :     0.330000
+lambda     :     1.500000
+lambda_es  :     1.500000
+lambda_ec  :     2.020000
+rho_eps    :     0.940000
+sig_eps    :     0.020000
+pr_ret     :     0.022000
+pr_die     :     0.089000
+sig_e      :     0.010000
+ 
+TAX PARAMETERS
+taxfunc          :            4
+tau_c        :     0.350000
+tau_p        :     0.133030
+ss_cap_ratio :     2.283000
+tau_d        :     0.180600
+lambda (HSV) :     0.798895
+tau (HSV)    :     0.127000
+repl         :     0.400000
+tau_h        :     0.500000
+y_H          :     3.016142
+share_toptax :     0.029037
+ 
+ESTIMATED PARAMETERS
+beta      :     0.924000
+chi       :    30.000000
+delta     :     0.060000
+vi        :     0.890000
+gamma     :     0.475000
+rho_theta :         0.890000
+sig_theta :         0.175000
+uncmean_theta :    -0.030500
+c0_es      :        0.131000
+c1_es      :        2.000000
+c0_ec      :        4.500000
+c1_ec      :        2.000000
+op_cost_es :        0.008000
+op_cost_ec :        0.061000
+switch_cost_CP :        0.195000
+switch_cost_PC :        0.000000
+ 
+Aggregates
+ED         :          0.000000000
+ED goods (in output units):          0.000000023
+bal_ss     :         -0.000000025
+res_gov    : -0.002971815
+tax_inc_gdp:  0.117054734
+r          :  0.021715457
+w          :     1.332460
+pen        :     0.175885
+tr         :     0.000000
+ss_cap     :     1.003862
+bal_gov    :    -0.000000
+y_ave      :     0.439712
+A              :  1.796168145
+Y              :  0.591834714
+Y_C         :  0.166784544
+Y_entre              :  0.425050171
+Y_entre_share              :  0.718190671
+KY              :  3.034915156
+ave_l_work      :     0.330975
+taxes_ss/taxes_tot        :  0.260707606
+taxes_inctaxes_tot       :  0.518102226
+taxes_corptaxes_tot      :  0.165635890
+taxes_divtaxes_tot       :  0.055554278
+taxes_tot       :  0.133713100
+taxes_inc_corp_div       :  0.098853078
+taxes_ss       :  0.034860022
+taxes_tot_gdp   :  0.225929803
+pen_tot       :  0.034860047
+taxes_occ(1)       :  0.081040080
+taxes_occ(2)       :  0.012314906
+taxes_occ(3)       :  0.006158190
+taxes_occ(4)       :  0.033195571
+taxes_r      :  0.001004354
+K_entre            :  1.122629164
+K_C                :  0.673538980
+K                :  1.796168145
+N_C                :  0.083864134
+N_entre            :  0.149050570
+labsup             :  0.232914704
+C                 :  0.382857071
+C_entre           :  0.097992517
+C_worker            :  0.229692097
+C_r             :  0.055172458
+avetheta_allentre  :  1.171662089
+avetheta_soleprop  :  1.113623203
+avetheta_Scorp     :  1.201226178
+avetheta_Ccorp     :  1.482479405
+avek_allentre      :  9.063599516
+avek_soleprop      :  5.026491287
+avek_Scorp         :  7.022891438
+avek_Ccorp          : 40.167911790
+aveklratio_allentre	 :  7.531867656
+aveklratio_soleprop	 :  8.359870349
+aveklratio_Scorp    :  7.885206452
+aveklratio_Ccorp    :  6.852601439
+avekyratio_allentre	 :  2.641168601
+avekyratio_soleprop	 :  2.931520850
+avekyratio_Scorp    :  2.765072442
+avekyratio_Ccorp    :  2.402973151
+N_share_C	 :  0.360063717
+N_share_EP	 :  0.212133106
+N_share_ES   :  0.111316002
+N_share_EC   :  0.316487174
+N_share_allC   :  0.676550892
+K_share_C	 :  0.374986597
+K_share_EP	 :  0.229962970
+K_share_ES   :  0.113820525
+K_share_EC   :  0.281229908
+K_share_allC   :  0.656216505
+labshare_ES	 :  0.582826418
+labshare_EC	 :  0.502616184
+labshare_corp	 :  0.523487190
+labshare_allcorp	 :  0.577677048
+ 
+TARGETS and RESULTS
+Occ/LFO distribution
+share_entre_act :     0.154479
+share_EP_entre :     0.663444
+share_ES_entre :     0.235026
+share_EC_entre :     0.101530
+share_active :     0.801802
+Share of income declared as wage (ES and EC)
+share_wage_ES :     0.376718
+share_wage_EC :     0.105139
+share_wage_EC_cf :     0.014073
+share_wage_ES(bottom 40%), by emp:     0.838609
+share_wage_ES(middle 40%), by emp :     0.583526
+share_wage_ES(top 20%), by emp :     0.113596
+share_wage_EC(bottom 40%), by emp :     0.974247
+share_wage_EC(middle 40%), by emp :     0.870535
+share_wage_EC(top 20%), by emp :     0.010697
+share_wage_ES(bottom 40%), by capital:     0.620077
+share_wage_ES(middle 40%), by capital :     0.394835
+share_wage_ES(top 20%), by capital :     0.228557
+share_wage_EC(bottom 40%), by capital :     0.974247
+share_wage_EC(middle 40%), by capital :     0.000589
+share_wage_EC(top 20%), by capital :     0.014604
+Share facing financial constraints and leverages (EP,ES,EC)
+frac_bor_ep :     0.801211
+frac_bor_es :     0.841650
+frac_bor_ec :     0.789715
+leverage_ep :     0.274514
+leverage_es :     0.286751
+leverage_ec :     0.411971
+Average and median income ratio
+ratio_aveinc_entre_worker :     2.547005
+ratio_medinc_entre_worker :     1.744471
+Share of employer
+share_empl_EP :     1.000000
+share_empl_ES :     1.000000
+share_empl_EC :     1.000000
+share_empl_entre :     1.000000
+Average firm size (# employees) rel to EP
+empsize_rel_ES :     1.481281
+empsize_rel_EC :     9.748962
+payrollsize_lfo(EP) :     0.801161
+payrollsize_lfo(ES) :     1.467881
+payrollsize_lfo(EC) :     8.391261
+Median income by lfo
+median_inc_lfo :     0.373328
+median_inc_lfo :     0.656120
+median_inc_lfo :     4.489958
+Median net income by lfo
+median_netinc_lfo :     0.260905
+median_netinc_lfo :     0.168910
+median_netinc_lfo :     2.023874
+Median emp by lfo
+median_emp_lfo :     0.398972
+median_emp_lfo :     0.745117
+median_emp_lfo :     4.352082
+wealth and income shares by LFO
+wealth_share_ep :     0.421627
+wealth_share_es :     0.189213
+wealth_share_ec :     0.389160
+inc_share_ep :     0.325921
+inc_share_es :     0.166503
+inc_share_ec :     0.507575
+netinc_share_ep :     0.470383
+netinc_share_es :     0.152806
+netinc_share_ec :     0.376810
+Share of income and wealth owned by entre
+share_inc_entre :     0.317566
+share_wealth_entre :     0.558752
+ 
+Inequality measures
+gini_wealth_all :     0.823141
+gini_wealth_entre :     0.563220
+wealth_share(1) :     0.198295
+wealth_share(2) :     0.652784
+wealth_share(3) :     0.875337
+wealth_share(4) :     0.000000
+gini_inc_all :     0.568869
+gini_inc_entre :     0.640332
+inc_share(1) :     0.145058
+inc_share(2) :     0.551770
+inc_share(3) :     0.656063
+inc_share(4) :     0.125485
+ 
+Occ/LFO choice by income and wealth
+share_entre_top(1) :     0.964564
+share_entre_top(2) :     0.599031
+share_entre_top(3) :     0.532934
+share_entre_top_inc(1) :     0.939006
+share_entre_top_inc(2) :     0.261837
+share_entre_top_inc(3) :     0.379103
+share_entre_quint(1) :     0.000000
+share_entre_quint(2) :     0.000000
+share_entre_quint(3) :     0.005437
+share_entre_quint(4) :     0.276136
+share_entre_quint(5) :     0.490820
+share_entre_quint_inc(1) :     0.094636
+share_entre_quint_inc(2) :     0.055071
+share_entre_quint_inc(3) :     0.068586
+share_entre_quint_inc(4) :     0.161603
+share_entre_quint_inc(5) :     0.392498
+share_lfo_top(2,1) :     0.118166
+share_lfo_top(3,1) :     0.043781
+share_lfo_top(4,1) :     0.838053
+share_lfo_top(2,2) :     0.377314
+share_lfo_top(3,2) :     0.176532
+share_lfo_top(4,2) :     0.446154
+share_lfo_top(2,3) :     0.482857
+share_lfo_top(3,3) :     0.237485
+share_lfo_top(4,3) :     0.279658
+share_lfo_top_inc(2,1) :     0.026661
+share_lfo_top_inc(3,1) :     0.010256
+share_lfo_top_inc(4,1) :     0.963083
+share_lfo_top_inc(2,2) :     0.111697
+share_lfo_top_inc(3,2) :     0.058158
+share_lfo_top_inc(4,2) :     0.830145
+share_lfo_top_inc(2,3) :     0.384537
+share_lfo_top_inc(3,3) :     0.250155
+share_lfo_top_inc(4,3) :     0.365308
+share_lfo_quint(2,1) :     0.000000
+share_lfo_quint(3,1) :     0.000000
+share_lfo_quint(4,1) :     0.000000
+share_lfo_quint(2,2) :     0.000000
+share_lfo_quint(3,2) :     0.000000
+share_lfo_quint(4,2) :     0.000000
+share_lfo_quint(2,3) :     0.985059
+share_lfo_quint(3,3) :     0.014941
+share_lfo_quint(4,3) :     0.000000
+share_lfo_quint(2,4) :     0.825335
+share_lfo_quint(3,4) :     0.174587
+share_lfo_quint(4,4) :     0.000079
+share_lfo_quint(2,5) :     0.568802
+share_lfo_quint(3,5) :     0.271467
+share_lfo_quint(4,5) :     0.159731
+share_lfo_quint_inc(2,1) :     0.891505
+share_lfo_quint_inc(3,1) :     0.108495
+share_lfo_quint_inc(4,1) :     0.000000
+share_lfo_quint_inc(2,2) :     0.865858
+share_lfo_quint_inc(3,2) :     0.134122
+share_lfo_quint_inc(4,2) :     0.000020
+share_lfo_quint_inc(2,3) :     0.854979
+share_lfo_quint_inc(3,3) :     0.144658
+share_lfo_quint_inc(4,3) :     0.000363
+share_lfo_quint_inc(2,4) :     0.774866
+share_lfo_quint_inc(3,4) :     0.217759
+share_lfo_quint_inc(4,4) :     0.007376
+share_lfo_quint_inc(2,5) :     0.500711
+share_lfo_quint_inc(3,5) :     0.302593
+share_lfo_quint_inc(4,5) :     0.196697
+ 
+Employment share by firm size
+share_emp(1) :     0.175495
+share_emp(2) :     0.138376
+share_emp(3) :     0.154396
+share_emp(4) :     0.531733
+ 
+Transitions
+trans_entre_work :     0.095862
+trans_work_entre :     0.019045
+trans_CP :     0.030454
+trans_PC :     0.029052
+trans_SC :     0.037048
+trans_mat(1,1) :     0.980955
+trans_mat(1,2) :     0.014240
+trans_mat(1,3) :     0.004169
+trans_mat(1,4) :     0.000636
+trans_mat(2,1) :     0.109157
+trans_mat(2,2) :     0.883517
+trans_mat(2,3) :     0.000490
+trans_mat(2,4) :     0.006837
+trans_mat(3,1) :     0.087982
+trans_mat(3,2) :     0.000284
+trans_mat(3,3) :     0.898492
+trans_mat(3,4) :     0.013242
+trans_mat(4,1) :     0.027223
+trans_mat(4,2) :     0.040527
+trans_mat(4,3) :     0.022788
+trans_mat(4,4) :     0.909463
+ 
+ATR
+P99.99+ :     0.200332
+P99.9-P99.99 :     0.212635
+P99-P99.9 :     0.262418
+P90-P99 :     0.275403
+P50-P90 :     0.079286
+Bottom 50% :     0.008473
+ 
+Checks wealth distribution
+Q1,mass :     0.307945
+Q2,mass :     0.000000
+Q3,mass :     0.289209
+Q4,mass :     0.200444
+Q5,mass :     0.202403
+ 
+Checks income distribution
+Q1,mass :     0.145178
+Q2,mass :     0.173456
+Q3,mass :     0.201485
+Q4,mass :     0.279634
+Q5,mass :     0.200246
+ 
+Checks max income
+maxinc_work :    21.788989
+maxinc_ep   :   262.448718
+maxinc_es   :   262.309718
+maxinc_ec   :   316.680644
+mass_a1     :     0.246911
+mass_a1_a3  :     0.321723
+mass_aN     :     0.000000

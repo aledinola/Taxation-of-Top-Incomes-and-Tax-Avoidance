@@ -1,0 +1,83 @@
+# v47
+
+# Select Compiler
+COMPILER =  ifx
+
+SWITCH = /fpp /Qmkl /Qopenmp /fast /O3 /Qipo /Qprec-div- /wrap-margin-
+SWITCH1 = /fpp /Qmkl /Qopenmp /fast /O3 /Qipo /Qprec-div- /heap-arrays0 /wrap-margin-
+#SWITCH = /Qopenmp /traceback /check:stack /wrap-margin-
+
+OBJECTS = mod_utilities.obj mod_numerical.obj mod_globals.obj mod_functions.obj mod_initialize.obj \
+          mod_distribution.obj mod_household.obj mod_targets.obj mod_steady_state.obj \
+		  mod_transition.obj mod_welfare.obj main.obj
+
+EXEC = exe\run.exe
+
+# Targets
+$(EXEC): $(OBJECTS)
+	$(COMPILER) -o $(EXEC) $(OBJECTS) $(SWITCH) -link -stack:2147483647
+
+mod_utilities.obj: src\mod_utilities.f90
+	$(COMPILER) $(SWITCH) -c src\mod_utilities.f90
+
+mod_numerical.obj: src\mod_numerical.f90
+	$(COMPILER) $(SWITCH1) -c src\mod_numerical.f90
+
+mod_globals.obj: src\mod_globals.f90
+	$(COMPILER) $(SWITCH) -c src\mod_globals.f90
+
+mod_functions.obj: src\mod_functions.f90
+	$(COMPILER) $(SWITCH) -c src\mod_functions.f90
+
+mod_initialize.obj: src\mod_initialize.f90
+	$(COMPILER) $(SWITCH) -c src\mod_initialize.f90
+
+mod_distribution.obj: src\mod_distribution.f90
+	$(COMPILER) $(SWITCH) -c src\mod_distribution.f90
+
+mod_household.obj: src\mod_household.f90
+	$(COMPILER) $(SWITCH) -c src\mod_household.f90
+
+mod_targets.obj: src\mod_targets.f90
+	$(COMPILER) $(SWITCH1) -c src\mod_targets.f90
+
+mod_steady_state.obj: src\mod_steady_state.f90
+	$(COMPILER) $(SWITCH) -c src\mod_steady_state.f90
+
+mod_transition.obj: src\mod_transition.f90
+	$(COMPILER) $(SWITCH) -c src\mod_transition.f90
+
+mod_welfare.obj: src\mod_welfare.f90
+	$(COMPILER) $(SWITCH) -c src\mod_welfare.f90
+
+main.obj: src\main.f90
+	$(COMPILER) $(SWITCH) -c src\main.f90
+
+
+# Run executable
+run:
+	$(EXEC)
+
+# Cleaning everything
+
+clean:
+	del *.mod
+	del *.obj
+	del *.pdb
+	del *.ilk
+	del $(EXEC)
+
+#To compile in Mac, type:
+# $ make -f makefile_mac
+
+#To compile in Windows, type:
+# $ nmake /f makefile_win
+
+#Compilation with pre-processor directives, see term -fpp 
+#$(COMPILER) -fpp $(SWITCH) $(SRCS) -o $(EXEC)
+
+#Flag /heap-arrays0 tells the compiler to store
+#all arrays on the heap instead of the stack
+#see https://community.intel.com/t5/Intel-Fortran-Compiler/allocatable-automatic-stack-heap/m-p/1229112#M152715
+
+# Old line $(COMPILER) -fpp $(SWITCH) $(SRCS) -o $(EXEC)
