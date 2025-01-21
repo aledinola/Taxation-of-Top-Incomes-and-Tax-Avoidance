@@ -1,0 +1,39 @@
+DATA SOURCES
+
+
+*********************************************************************************************************
+
+Wage share in S-corporations and C-corporations:
+
+IRS Statistics of Income:
+
+SOI Tax Stats - Corporation Income Tax Returns Complete Report
+https://www.irs.gov/statistics/soi-tax-stats-corporation-income-tax-returns-complete-report-publication-16
+
+--> Returns of Active Corporations
+-- > Returns of Active Corporations,  Form 1120S (S-Corporations)
+
+by major industry, by business receipt, by assets (depending on availability)
+
+wage share = Officer compensation/(officer compensation + total net income less deficit)
+
+*******************************************************************************************************
+
+Share of Passthroughs and Share of S-corporations and C-corporations:
+
+SOI Tax Stats - Integrated Business Data
+
+https://www.irs.gov/statistics/soi-tax-stats-integrated-business-data
+
+--> Table 1: Number of Returns, Total Receipts, Business Receipts, Net Income (less deficit), Net Income, and Deficit by legal form, 1980-2015
+
+
+*******************************************************************************************************
+
+For labor share in corporations:
+
+BEA National Income and Product Accounts
+
+https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey
+
+Table 1.14

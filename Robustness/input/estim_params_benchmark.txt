@@ -1,0 +1,24 @@
+0.924     ! beta
+0.0212311 ! r (initial guess)
+0.132719  ! tau_p (initial guess)
+0.796     ! hsv_0, or lambda_hsv
+0.127    ! hsv_1, or tau_hsv
+30.0    ! chi
+0.89    ! vi
+0.475    ! gamma
+0.89      ! rho theta  
+0.175    ! sig theta 
+-0.0305  ! uncmean theta
+1.5     ! lambda
+1.5      ! lambda ES
+2.02      ! lambda EC
+0.131      ! c0_es, tax avoidance cost      
+4.5    ! c0_ec, tax avoidance cost
+0.008    ! op cost es
+0.061   ! op cost ec
+12.2     ! eps super     
+0.0085   ! prob super
+0.12   ! prob super back
+0.195      ! switch_cost_CP: switch cost C->Passthrough
+0.0     ! switch_cost_PC: switch cost Passthrough->C
+
