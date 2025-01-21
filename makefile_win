@@ -2,7 +2,7 @@
 
 # Select Compiler
 COMPILER =  ifx
-
+# /Qmkl
 SWITCH = /fpp /Qmkl /Qopenmp /fast /O3 /Qipo /Qprec-div- /wrap-margin-
 SWITCH1 = /fpp /Qmkl /Qopenmp /fast /O3 /Qipo /Qprec-div- /heap-arrays0 /wrap-margin-
 #SWITCH = /Qopenmp /traceback /check:stack /wrap-margin-

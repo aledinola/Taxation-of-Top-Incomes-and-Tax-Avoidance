@@ -1,8 +1,7 @@
 !##############################################################################
 ! PROGRAM MAIN
 !
-! copyright: Alessandro Di Nola and Haomin Wang
-!            University of Barcelona, University of Konstanz
+! Authors: Alessandro Di Nola, Haomin Wang
 ! ! #VC# V47
 
 ! INTERNAL PROCEDURES
@@ -33,7 +32,7 @@ implicit none
 !============================================================================
 ! DECLARATION 
 !============================================================================
-integer, parameter :: iMaxThreads = 14
+integer, parameter   :: iMaxThreads = 14
 integer              :: i,istat,flag_ss,uno,T
 real(8)              :: tau_h_init,tau_h_final
 character(len=256)   :: pwd, dir_name
@@ -84,7 +83,7 @@ cf_avoidance   = 0		! 0 = baseline environment with avoidance
 						! 4 = no C-corporations. 
 cf_occpol      = 0 	    ! 0 = occpol choice is flexible (for calibration etc, choose this)
 						! 1 = fix occpol to the benchmark 
-do_run         = 1		! 0 = evaluate ss once, 
+do_run         = 0		! 0 = evaluate ss once, 
 						! 1 = Model validation: Compare tau_h = 0.28 vs tau_h = 0.5
 						! 2 = comparative statics, 
 						! 3 = fiscal neutral welfare with transition (loop over tau_h) 
@@ -94,13 +93,13 @@ n_tau_h        = 52     ! If do_run = 2 or 3, set n_tau_h to 52. If do_run = 1, 
 do_fix_ss_cap  = 0		! 0 = ss_cap is endogenous, 1 = ss_cap is fixed at the benchmark level
 do_fix_pen     = 0		! 0 = pension replacement rate is fixed, but pension level is endogeneous, 1 = pension level is fixed (so that replacement rate is endogeneous). Only relevant if do_benchmark = .false.
 do_compute_valc = 0		! 1 = compute valc of benchmark (only relevant if do_run = 0 and do_benchmark = .true.) 
-do_GE          = 2     ! Option only relevant for steady state or comparative statics. (do_run = 0 or 2)
+do_GE          = 1     ! Option only relevant for steady state or comparative statics. (do_run = 0 or 2)
 						! 0 =PE
 						! 1 =GE r and tau_p   (for baseline model calibration)
 					    ! 2 =GE with r, tau_p and hsv_0 (for counterfactuals with fiscal neutrality)
 						! 3 =PE with fiscal neutrality (r is fixed)
 do_CEV_decomp  = 0		! 0 = do not decompose CEV, 1 = decompose CEV (slow)
-do_benchmark   = .false. ! true = benchmark steady state, false = else.
+do_benchmark   = .true. ! true = benchmark steady state, false = else.
 						 ! do_benchmark should be .false., unless running steady state (do_run = 0)
 						 ! in the benchmark model.
 verbose        = 1       ! Flag 0/1/2 to control output on the screen in the whole code.
