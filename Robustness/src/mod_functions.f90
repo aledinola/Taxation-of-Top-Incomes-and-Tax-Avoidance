@@ -1,16 +1,11 @@
 module mod_functions
 
     ! Module mod_functions contains procedures specific to this project
-    ! Numerical routines are contained in another module
-    ! #VC# V43
+    ! Numerical routines are contained in mod_numerical
     
     use mod_utilities, only: readscalar
     use mod_globals  ! Make model parameters known to these procedures
     implicit none
-    
-    !private !Variables and internal proc are not visible outside of this module
-    
-    !public :: grid, interp1, utilfun
    
 contains
     
@@ -164,29 +159,6 @@ contains
 
     end function prodfun
 
-    !=======================================================================!
-    
-    !pure function foc_n(k,w,theta) result(F)
-    !    implicit none
-    !    ! FOC w.r.t. labor used in the firm (le+n), as a function of capital
-    !    ! i.e. I do not take the FOC also wrt k 
-    !    ! F = optimal (le+n) given CAPITAL k
-    !    ! Declare inputs:
-    !    real(8), intent(in) :: k
-    !    real(8), intent(in) :: w
-    !    real(8), intent(in) :: theta
-    !    ! vi,delta are fixed params from globals
-    !    !Declare output:
-    !    real(8) :: F
-    !    ! Declare local:
-    !    real(8) :: term1, front1
-    !    
-    !    term1 = 1.0d0/((1.0d0-gamma)*vi-1.0d0)
-    !    front1 = (w/(vi*(1.0d0-gamma)))**term1
-    !
-    !    F = front1*theta**(-term1)*k**(-gamma*vi*term1)
-    !
-    !end function foc_n
     !=======================================================================!
     
     subroutine profit_max(a,theta,lambda_,r,w,k_opt,n_opt)

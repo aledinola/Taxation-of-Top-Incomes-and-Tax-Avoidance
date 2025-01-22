@@ -1,16 +1,5 @@
 !##############################################################################
 ! PROGRAM MAIN
-
-! INTERNAL PROCEDURES
-! - sub_write      (subroutine)
-! - read_params
-! - load_ss
-!==============================================================================!
-! WHERE RESULTS ARE SAVED
-! All results are saved in the folder 'output'
-! - Laffer curves: subfolders 'compstat','compstat_CF2'
-! - Welfare with fiscal neutrality, S.S. comparison: 'compstat_fn', 'compstat_CF2_fn'
-! - Welfare with fiscal neutrality, transition: 'comptran','comptran_CF2'
 !##############################################################################
 
 program main

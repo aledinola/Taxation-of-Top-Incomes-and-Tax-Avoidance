@@ -1,5 +1,4 @@
 module mod_welfare
-! #VC# V43
     use omp_lib
     use mod_globals
     use mod_utilities

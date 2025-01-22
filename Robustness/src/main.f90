@@ -1,21 +1,5 @@
 !##############################################################################
 ! PROGRAM MAIN
-!
-! copyright: Alessandro Di Nola and Haomin Wang
-!            University of Barcelona, University of Konstanz
-! ! #VC# V47_pen
-
-! INTERNAL PROCEDURES
-! - sub_write      (subroutine)
-! - read_params
-! - load_ss
-! SEE DICTIONARY
-!==============================================================================!
-! WHERE RESULTS ARE SAVED
-! All results are saved in the folder 'output'
-! - Laffer curves: subfolders 'compstat','compstat_CF2'
-! - Welfare with fiscal neutrality, S.S. comparison: 'compstat_fn', 'compstat_CF2_fn'
-! - Welfare with fiscal neutrality, transition: 'comptran','comptran_CF2'
 !##############################################################################
 
 program main
@@ -44,9 +28,6 @@ integer   		     :: n_tau_h
 real(8), parameter   :: max_tau_h = 0.6d0 !This is only for comparative statics do_RUN=2 or 3
 character(len=:), allocatable :: file_params 
 
-!type(modelResults) :: model_targets
-
-!prices0,val0,pol,distrib0,agg
 real(8)            :: tau_p_init,tau_p_final,tau_p0,hsv_0_0,hsv_0_init,hsv_0_final
 type(modelPrices)  :: prices0,prices_init,prices_final
 type(valfun)       :: val0,val_init,val_final,val_t1,valc_init,cev
@@ -110,15 +91,11 @@ do_write       = 0       ! 1= write results of comparative statics to txt
 !============================================================================
 ! EXECUTION
 !============================================================================
-write(*,*) "Happy version v47_pen!"
 
 !$omp parallel if (par_fortran==1)
 if (verbose>=1) write(*,*) "Parallel hello to you!"
 !$omp end parallel
-!pause 
 
-! Make sure directory for output already exists
-!call create_directory( savedir )
 
     ! Identify OS
     ! "#ifdef" is preprocessor directive. Must use "-fpp" in compilation. 

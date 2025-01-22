@@ -1,10 +1,7 @@
 module mod_targets
-    ! #VC# V47_pen
-    ! Last modified by Ale and Haomin on 2023-9-11
     use mod_globals
     use mod_functions
     use mod_numerical, only: myerror, my_ss,lrzcurve,outerprod,quantili, my_closest,locate,linint,unique,cumsum,quick_sort
-!    use toolbox, only: plot, execplot, sort
     use mod_utilities
     use mod_distribution, only: sub_distrib_map
     implicit none

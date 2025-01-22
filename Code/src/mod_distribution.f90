@@ -64,7 +64,6 @@ real(8),allocatable :: muy_z(:,:), muy_z_temp(:,:,:)
 	! We use Eugene Tan's trick to update the distribution of young agents. In particular, 
     ! we first update the endogenous state a, keeping the shocks (eps,theta) at their current 
     ! value. Second, we update the distribution using the transition (eps,theta,eps',theta')
-    ! See also Matlab file mu_one_step.m
 	
 	!$omp parallel if (par_fortran_mu==1) default(shared) private(it,ie,ia,io,iz_min, &
 	!$ io_prob,iap,omega_val)  reduction(+:muy_update,mur_update)
@@ -586,8 +585,6 @@ agg%C_worker  = sum(pol%cpoly(:,:,:,io)*distrib%muy(:,:,:,io))
 !-------------------------------------------------------------
 ! Calculate tax revenues, total operating costs, and total tax avoidance costs
 !-------------------------------------------------------------
-! TODO: tax revenue paid by the top 1% earners
-
 
 ! Aggregate taxes collected by the government
 agg%taxes_ss   = 0.0d0 !social security

@@ -58,8 +58,6 @@ module mod_globals
     ! - SHOCKS DISTRIBUTION - Epsilon (worker ability)
     real(8), parameter :: rho_eps   = 0.94d0  ! Persistence epsilon
     real(8), parameter :: sig_eps   = 0.02d0  ! Dispersion epsilon (*variance*)
-    ! If variance is 0.02, then standard deviation is around 0.14
-    !real(8), parameter :: sig_eps   = sqrt(0.02d0)  ! Dispersion epsilon (standard deviation)
     
     ! - SHOCKS DISTRIBUTION - Theta (entrepren ability)
     integer, parameter :: theta_calib   = 1     ! 1=Tauchen/Rouwen (AR1), 2=Brueggeman (2020),3=Pareto (Buera-Moll)
@@ -87,15 +85,11 @@ module mod_globals
     real(8) :: hsv_1 != 0.13d0  ! HSV tau, progressivity. 0.17 (Bakis, Kayma, Poschke), 
     
     ! Parameters for top income tax rate, only used when taxfunc=4
-    real(8) :: tau_h   ! top income tax rate
-    									 ! ?? baseline marginal tax rate at y_h is 0.24704
+    real(8) :: tau_h   ! top income tax rate								
     real(8) :: y_H_bench 
 
     !proportional income tax rate (relevant only if taxfunc=2)
     real(8), parameter :: tau_lin = 0.15d0       
-    !Standard deduction, relevant only if taxfunc = 3:
-    !real(8), parameter :: deduc   = 0.2385d0 ! as a frac of y_ave (source: Bettina 2020)
-    !real(8), parameter :: deduc   = 0.14085 ! as a frac of y_ave (in 2013: 12200/86620) (source: Bettina 2020  0.2385d0)
     real(8), parameter :: deduc   = 0.23d0 ! as a frac of GDP pc (in 2013: 12200/53117)
     !Number of tax brackets, relevant only if taxfunc = 3:
     integer, parameter :: n_brackets = 7
@@ -103,8 +97,6 @@ module mod_globals
     real(8), parameter :: top_rate = 0.396d0 ! U.S. tax code 2013
     real(8), dimension(n_brackets) :: tau_m    = [0.1d0,0.15d0,0.25d0,0.28d0,0.33d0,0.35d0,top_rate]
     !Tax brackets (as frac of ave inc), relevant only if taxfunc = 3:
-    !real(8), dimension(n_brackets) :: tax_brac = [0.0d0,0.214d0,0.868d0,1.753d0,2.672d0,4.771d0]
-    !real(8), dimension(n_brackets) :: tax_brac = [0.0d0,0.206d0,0.837d0,1.69d0,2.575d0,4.599d0] !we do not have a last tax bracket
     real(8), dimension(n_brackets) :: tax_brac = [0.0d0,0.336d0,1.365d0,2.756d0,4.199d0,7.499d0,8.472d0] !norm by GDP pc.
     ! Number of average tax rates to compute
     integer, parameter :: n_atr = 6
@@ -200,7 +192,7 @@ module mod_globals
     real(8), parameter :: a_space = 3.5d0    ! grid spacing (if 1, evenly spaced)
     
     ! Grid for labor supply (hours worked):
-    real(8), parameter :: l_min = 0.00d0   ! minimum hours !TODO
+    real(8), parameter :: l_min = 0.00d0   ! minimum hours
     real(8), parameter :: l_max = 1.6d0 ! maximum hours
     real(8), parameter :: le    = 0.0d0 !0.33d0    ! Fixed hours for entre
     
@@ -287,7 +279,6 @@ module mod_globals
     
     type(modelResults) :: data_targets
     
-    ! TODO: Add tau_p in structure prices
     type modelPrices
     	real(8) :: r
     	real(8) :: r_brac(2)
@@ -320,7 +311,6 @@ module mod_globals
          
      end type modelShares
      
-     ! todo: do we really need this as a global?
      type(modelShares) :: shares
      
     !=============================================================

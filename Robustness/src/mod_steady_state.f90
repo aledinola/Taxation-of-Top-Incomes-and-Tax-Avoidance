@@ -1,5 +1,5 @@
 module mod_steady_state
-	! #VC# V47
+
 	use mod_globals
 	use mod_functions
 	use mod_targets, only: targets_compute,txt_export,mom_export
@@ -7,7 +7,6 @@ module mod_steady_state
 	use mod_initialize,   only: initialize_model
 	use mod_distribution, only: get_distribution,get_KN,get_aggregates
 	use mod_numerical, only: zbrent,myerror,mywarning
-!	use toolbox, only: fzero,settol_root,setiter_root
 	use omp_lib
 	implicit none
 	

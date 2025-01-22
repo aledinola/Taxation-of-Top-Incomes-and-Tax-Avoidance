@@ -1,5 +1,4 @@
 module mod_initialize
-	! #VC# V44
 	
     use mod_globals
     use mod_utilities
@@ -18,8 +17,6 @@ contains
     real(8) :: r_min,r_max
     
     ! Initial values for r and tau_p are read from file estim_params
-    !prices0%r = 0.021228699d0 !0.01901953d0! 0.0190195268d0  
-    !prices0%tau_p = 0.12056381d0 
     prices0%r = r_glob 
     
     ! call fun_prices to update the other fields in "prices", including KN,w,y_ave,pen
@@ -216,10 +213,6 @@ contains
     
     ! initialize grid for assets
     call grid(a_grid,a_min,a_max,a_space)
-    !do i=2,5
-    !write(*,*) i,a_grid(i)-a_grid(i-1),a_grid(i)>a_grid(i-1)
-    !enddo
-    !pause
     
     ! Initialize switching cost
     
@@ -229,11 +222,6 @@ contains
      switch_cost(i,i) = 0.0d0
     enddo
     switch_cost(nz,:) = 0.0d0
-
-    ! Set switch cost from EC (io=4) to Passthroughs (io=2,3)
-    !switch_cost(4,1:3)   = switch_cost_CP 
-    ! Set switch cost from Passthroughs (io=2,3) to EC (io=4)
-    !switch_cost(1:3,4)   = switch_cost_PC 
     
     if (verbose>=1) then
 	
