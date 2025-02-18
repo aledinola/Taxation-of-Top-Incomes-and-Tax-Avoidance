@@ -3,3 +3,4 @@ Replication materials for Di Nola, Kocharkov, Scholl, Tkhir, and Wang (2025): "T
 
 # Suggested Citation
 Alessandro Di Nola & Georgi Kocharkov & Almuth Scholl & Anna-Mariia Tkhir & Haomin Wang, 2025. "Taxation of Top Incomes and Tax Avoidance," International Economic Review, forthcoming. 
+https://onlinelibrary.wiley.com/doi/10.1111/iere.12758
